@@ -234,7 +234,7 @@ Next hop: 10.1.2.10
 
 1. Set up the configuration file
 
-> macvtap setting is relatively simple, you only need to configure the corresponding parameters.
+> arp_proxy has high performance and is relatively simple to set up; you only need to configure the corresponding parameters.
 >
 > Network requirements: The network needs to support ARP transmission, and ordinary intranet IP can be announced through ARP.
 >
@@ -446,7 +446,8 @@ Telegram: @cherts
 - [AnyConnect Secure Client](https://www.cisco.com/) (Can be downloaded through group files: Windows/macOS/Linux/Android/iOS)
 - [OpenConnect](https://gitlab.com/openconnect/openconnect) (Windows/macOS/Linux)
 - [Mikata AnyLink Secure Client](https://github.com/tlslink/anylink-client) (Windows/macOS/Linux)
-- [Third-party client download address](https://cisco.yangpin.link) (Windows/macOS/Linux/Android/iOS)
+- [Recommende Third-party client download link](https://cisco.yydy.link/) (Windows/macOS/Linux/Android/iOS)
+- [Client download panel setup](https://blog.yydy.link/archives/2018.html) (Supports Docker, Linux binaries, and direct operation on Windows systems)
 
 ## Contribution
 
