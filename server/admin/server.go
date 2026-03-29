@@ -30,8 +30,6 @@ func StartAdmin() {
 			next.ServeHTTP(w, req)
 		})
 	})
-	r.Use(authMiddleware)
-	r.Use(handlers.CompressHandler)
 
 	// Monitoring and detection
 	r.HandleFunc("/status.html", func(w http.ResponseWriter, r *http.Request) {
