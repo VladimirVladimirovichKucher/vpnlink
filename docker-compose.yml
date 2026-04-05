@@ -1,0 +1,17 @@
+services:
+  anylink:
+    image: cherts/anylink:latest
+    container_name: anylink
+    restart: always
+    privileged: true
+    ports:
+      - "443:443"
+      - "8800:8800"
+      - "443:443/udp"
+    environment:
+      LINK_LOG_LEVEL: info
+    volumes:
+      - ./conf:/app/conf
+    command:
+      - --conf=/app/conf/server.toml
+    dns_search: .
