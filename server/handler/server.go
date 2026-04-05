@@ -119,7 +119,12 @@ func initRoute() http.Handler {
 	// r.Handle("/otp-verification", antiBruteForce(http.HandlerFunc(LinkAuth_otp))).Methods(http.MethodPost)
 	r.HandleFunc(fmt.Sprintf("/profile_%s.xml", base.Cfg.ProfileName), func(w http.ResponseWriter, r *http.Request) {
 		b, _ := os.ReadFile(base.Cfg.Profile)
-		w.Write(b)
+		host := r.Host
+		if h, _, err := net.SplitHostPort(host); err == nil {
+			host = h
+		}
+		content := strings.ReplaceAll(string(b), "{{HOSTADDR}}", host)
+		w.Write([]byte(content))
 	}).Methods(http.MethodGet)
 	r.PathPrefix("/files/").Handler(
 		http.StripPrefix("/files/",

@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <AnyConnectProfile xmlns="http://schemas.xmlsoap.org/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://schemas.xmlsoap.org/encoding/ AnyConnectProfile.xsd">
-
     <ClientInitialization>
         <UseStartBeforeLogon UserControllable="false">false</UseStartBeforeLogon>
         <StrictCertificateTrust>false</StrictCertificateTrust>
@@ -21,20 +20,11 @@
                 <ExtendedMatchKey>ClientAuth</ExtendedMatchKey>
             </ExtendedKeyUsage>
         </CertificateMatch>
-
     </ClientInitialization>
-
     <ServerList>
-
         <HostEntry>
-            <HostName>VPN</HostName>
-            <HostAddress>localhost</HostAddress>
+            <HostName>{{HOSTADDR}}</HostName>
+            <HostAddress>{{HOSTADDR}}</HostAddress>
         </HostEntry>
-
-        <HostEntry>
-            <HostName>VPN2</HostName>
-            <HostAddress>localhost2</HostAddress>
-        </HostEntry>
-
     </ServerList>
 </AnyConnectProfile>
